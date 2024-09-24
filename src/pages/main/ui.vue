@@ -11,9 +11,9 @@
 
                     <div class="welcome__sub">
                         <div class="welcome__card card">
-                            <div class="avatar" style="background-image: url('/img/Ellipse.png')"></div>
-                            <div class="avatar" style="background-image: url('/img/Ellipse2.png')"></div>
-                            <div class="avatar" style="background-image: url('/img/Ellipse3.png')"></div>
+                            <div class="avatar avatar-1"></div>
+                            <div class="avatar avatar-2"></div>
+                            <div class="avatar avatar-3"></div>
                             <div class="avatar add-avatar">
                                 <span>+</span>
                             </div>
@@ -341,6 +341,18 @@ import { useMotion } from '@vueuse/motion';
             margin-left: -15px;
             position: relative;
             z-index: 1;
+
+            &-1 {
+                background-image: url('/img/Ellipse.png')
+            }
+
+            &-2 {
+                background-image: url('/img/Ellipse2.png')
+            }
+
+            &-3 {
+                background-image: url('/img/Ellipse3.png')
+            }
 
             &.add-avatar {
                 border: 1.12px solid rgba(22, 31, 62, 0.1);
