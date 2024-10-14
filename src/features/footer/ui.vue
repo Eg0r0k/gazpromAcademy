@@ -1,11 +1,11 @@
 <template>
     <footer class="footer">
-        <nav class="footer__nav">
+        <!-- <nav class="footer__nav">
             <div class="footer__com">© Образовательная платформа <b>Газпром. Академия,</b> 2024</div>
             <div class="footer__info">Мы используем файлы cookie. Они нужны для персонализации сервисов и удобства
                 пользования
                 сайтом. Если вы не согласны на их использование, поменяйте настройки браузера.</div>
-        </nav>
+        </nav> -->
     </footer>
 </template>
 
@@ -14,6 +14,8 @@
 </script>
 
 <style lang="scss" scoped>
+/*@media screen and (max-width:1307px) {}
+
 .footer {
     color: white;
     background-color: var(--second-color);
@@ -36,4 +38,5 @@
         max-width: 1242px;
     }
 }
+    */
 </style>

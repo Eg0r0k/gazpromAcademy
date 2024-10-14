@@ -6,7 +6,7 @@
             <TextInput v-model="email.value.value" type="text" placeholder="Email" name="email" />
             <TextInput v-model="password.value.value" type="text" placeholder="Password" name="password" />
 
-            <Button @click="onSubmit">Login</Button>
+            <Button size="m" color="main" @click="onSubmit">Login</Button>
         </div>
     </div>
 </template>

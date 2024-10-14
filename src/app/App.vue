@@ -1,6 +1,6 @@
 <template>
 
-  <Header />
+  <Header style="" />
   <div class="wrapper">
     <main>
       <RouterView v-slot="{ Component, route }">
@@ -21,6 +21,7 @@ import { PopUp } from '@/features/popUp';
 
 <style lang="scss" scoped>
 .wrapper {
+  padding-top: 140px;
 
   main {
     flex: 1;

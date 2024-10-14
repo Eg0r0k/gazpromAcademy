@@ -24,8 +24,9 @@
                         в удобном формате, зарабатывайте баллы и находите лучшие знания <br>
                         на нашей платформе</p>
                     <div class="welcome__group">
-                        <button class="welcome__btn welcome__btn-active">Начать учиться</button>
-                        <button class="welcome__btn">Консультация</button>
+                        <Button class="welcome__group-1" size="m" color="main">Начать учиться</Button>
+                        <Button class="welcome__group-2" size="m" color="main-outline">Консультация</Button>
+
                     </div>
                 </div>
 
@@ -97,6 +98,7 @@
             <StudentsWorks />
             <NewEra v-motion-pop-visible-once />
             <MediaData />
+            <OneSystem />
             <ContantUs v-motion-slide-visible-bottom />
 
         </div>
@@ -110,11 +112,48 @@ import { DirectionsSlider } from '@/features/directions';
 import { HelpYou } from '@/features/help';
 import { MediaData } from '@/features/media';
 import { NewEra } from '@/features/newEra';
+import { OneSystem } from '@/features/oneSystem';
 import { StudentsWorks } from '@/features/students';
+import { Button } from '@/shared/ui/button';
 import { useMotion } from '@vueuse/motion';
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width:1155px) {
+    .title {
+        font-size: 40px !important;
+    }
+
+    .block {
+        display: none
+    }
+
+    .welcome__group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    .welcome {
+        margin-bottom: 20px !important;
+
+
+
+        &__info {
+            width: 100% !important;
+        }
+
+        &__right {
+            display: none !important;
+        }
+
+        &__bottom {
+            display: none;
+        }
+    }
+}
+
 @keyframes move-top-bottom {
     0% {
         transform: translateY(-2%);
@@ -141,6 +180,14 @@ import { useMotion } from '@vueuse/motion';
     padding: 0 16px;
     box-sizing: border-box;
 
+}
+
+.welcome__group {
+
+    &-1,
+    &-2 {
+        min-width: 240px;
+    }
 }
 
 .row-1,

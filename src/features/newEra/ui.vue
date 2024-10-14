@@ -12,6 +12,14 @@
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width:1111px) {
+    .era {
+        &__title {
+            font-size: 40px !important;
+        }
+    }
+}
+
 .era {
     display: flex;
     justify-content: center;
@@ -22,6 +30,7 @@
     border-radius: 30px;
     background-position: center;
     margin-bottom: 110px;
+
     &__title {
         font-weight: 600;
         font-size: 70px;

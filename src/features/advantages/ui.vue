@@ -11,9 +11,9 @@
             <div class="stat-frame gradient">
                 >1.5K
             </div>
-            <h2>Экспертов</h2>
-            <p>Твои наставники это одни из лучших специалистов области
-                с многолетним опытом и сильным бэкграундом</p>
+            <h2>Сильные
+                наставники</h2>
+            <p>Специалисты с сильным бэкграундом и многолетним опытом</p>
         </div>
         <div class="stat-item" v-motion-roll-visible-once-bottom>
             <div class="stat-frame">
@@ -32,8 +32,22 @@
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width:1111px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+}
+
+
 .stats-container {
     display: flex;
+
     justify-content: space-between;
     margin-bottom: 110px;
 
@@ -60,6 +74,7 @@
         font-size: 32px;
         line-height: 112%;
         margin-bottom: 16px;
+        color: var(--second-color);
     }
 
     p {
@@ -76,7 +91,7 @@
 
     .stat-item {
 
-        width: 30%;
+        width: 350px;
         text-align: center;
 
 

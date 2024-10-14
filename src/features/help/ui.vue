@@ -6,7 +6,8 @@
                 и мягкие навыки: в группах и самостоятельно выполняют проекты из практики крупных ИТ- компаний и
                 проводят
                 код-ревью.</p>
-            <button>Подробнее о трудоустройстве </button>
+
+            <Button color="main-outline">Подробнее о трудоустройстве </Button>
         </div>
         <div class="help__right">
             <img src="/img/help.png" alt="">
@@ -19,6 +20,10 @@
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width:925px) {
+    .help {}
+}
+
 .help {
     display: flex;
     justify-content: space-between;

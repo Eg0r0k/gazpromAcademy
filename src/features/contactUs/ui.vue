@@ -31,12 +31,13 @@
                     placeholder="Напишите свои вопросы, отзывы или предложения"></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Отправить сообщение</button>
+            <Button type="submit" class="submit-btn" color="main" size="m">Отправить сообщение</Button>
         </form>
     </div>
 </template>
 
 <script setup lang="ts">
+import { Button } from '@/shared/ui/button';
 import { reactive } from 'vue';
 
 const form = reactive({
@@ -123,15 +124,6 @@ const submitForm = () => {
     .submit-btn {
         display: block;
         margin-left: auto;
-        padding: 13px 35px;
-
-        background-color: var(--main-color);
-        color: #ffffff;
-        border: none;
-        border-radius: 56px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
 
         &:hover {
             background-color: #005bb5;

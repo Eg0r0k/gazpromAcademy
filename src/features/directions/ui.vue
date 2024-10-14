@@ -130,6 +130,7 @@ const setActiveCategory = (index: number) => {
         transition: all 0.2s ease-in;
         font-family: var(--font-family);
         font-weight: 500;
+        min-width: 152px;
         font-size: 14px;
         line-height: 143%;
         text-align: center;
@@ -173,13 +174,13 @@ const setActiveCategory = (index: number) => {
         background-size: contain;
         background-repeat: no-repeat;
         position: relative;
-        height: 680px;
 
-        max-width: 372px;
+        display: flex;
+        aspect-ratio: 9/16;
 
         color: white;
         width: 100%;
-        border-radius: 28px;
+
 
     }
 
