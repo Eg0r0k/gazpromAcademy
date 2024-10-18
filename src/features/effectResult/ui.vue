@@ -1,10 +1,8 @@
 <template>
     <div class="effectResult">
-
-
         <Carousel>
-            <Slide v-for="slide in 10" :key="slide">
-                <div class="carousel__item">
+            <Slide v-for="(slide, index) in imgs" :key="index">
+                <div class="carousel__item" :style="{ backgroundImage: `url(${slide})` }">
                     <p class="carousel__text">Смотрим на большие данные, так мы улучшаем курсы, чтобы вы достигли своей
                         цели - сменили
                         профессию или должность </p>
@@ -22,22 +20,24 @@
 </template>
 
 <script setup lang="ts">
-
+import { ref } from 'vue';
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
 
 import 'vue3-carousel/dist/carousel.css';
+import Png1 from '/img/slideV1.png'
+import Png2 from '/img/slideV2.png'
+import Png3 from '/img/slideV3.png'
+import Png4 from '/img/slideV4.png'
 
-
-
-
+const imgs = ref([Png1, Png2, Png3, Png4])
 </script>
+
 <style scoped lang="scss">
 .effectResult {
     margin-bottom: 150px;
 }
 
 @media screen and (max-width:1110px) {
-
     .carousel__text {
         display: none;
     }
@@ -62,11 +62,9 @@ import 'vue3-carousel/dist/carousel.css';
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/img/slideV1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .carousel__slide {

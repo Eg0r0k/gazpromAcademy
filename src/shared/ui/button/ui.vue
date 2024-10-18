@@ -42,7 +42,7 @@ const classes = computed(() => ({
         }
 
         &-main-outline {
-            border: 1px solid rgba(22, 31, 62, 0.2);
+            border: 1px solid #161f3e;
 
             color: var(--second-color);
         }
