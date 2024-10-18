@@ -33,6 +33,11 @@
 
 <style lang="scss" scoped>
 @media screen and (max-width:1111px) {
+    h2 {
+        font-weight: 600 !important;
+        margin-bottom: 10px !important;
+    }
+
     .stats-container {
         flex-direction: column;
     }
@@ -40,6 +45,7 @@
     .stat-item {
         width: 100% !important;
         margin-bottom: 20px;
+        text-align: left !important;
     }
 
 }
@@ -82,7 +88,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 140%;
-        text-align: center;
+
     }
 
     .gradient {
@@ -91,7 +97,7 @@
 
     .stat-item {
 
-        width: 350px;
+        width: 293px;
         text-align: center;
 
 

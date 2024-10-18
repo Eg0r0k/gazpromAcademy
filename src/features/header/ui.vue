@@ -135,6 +135,7 @@ import { Button } from '@/shared/ui/button';
     display: flex;
     justify-content: center;
     position: fixed;
+    top: 0;
     z-index: 100;
     backdrop-filter: blur(100px);
 }

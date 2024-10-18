@@ -84,6 +84,19 @@ const setActiveCategory = (index: number) => {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width:1110px) {
+    .directions {
+        &__group {
+
+            overflow-x: auto;
+
+
+        }
+
+    }
+}
+
+
 .directions__controls.active {
     background: linear-gradient(303deg, #ff2a80 33.5%, #ff41f2 100%);
     color: white;
@@ -123,6 +136,7 @@ const setActiveCategory = (index: number) => {
         display: flex;
         flex-direction: row;
         gap: 8px;
+        flex-wrap: wrap;
         margin-bottom: 40px;
     }
 
@@ -138,6 +152,7 @@ const setActiveCategory = (index: number) => {
         padding: 14px 30px;
         background: #f4f4f4;
         border-radius: 14px;
+
     }
 }
 

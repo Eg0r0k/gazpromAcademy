@@ -7,8 +7,8 @@
                 <div class="welcome__decoration-rt"></div>
                 <div class="welcome__info">
 
-                    <h2 class="welcome__title title">Цифровые</h2>
-
+                    <h2 class="welcome__title title">Цифровые </h2>
+                    <h2 class="welcome__title--sub title">Технологии</h2>
                     <div class="welcome__sub">
                         <div class="welcome__card card">
                             <div class="avatar avatar-1"></div>
@@ -18,8 +18,10 @@
                                 <span>+</span>
                             </div>
                         </div>
+
                         <h2 class="title-sub title">технологии</h2>
                     </div>
+
                     <p class="welcome__text">Получите знания об IT легко и доступно! Изучайте материалы <br>
                         в удобном формате, зарабатывайте баллы и находите лучшие знания <br>
                         на нашей платформе</p>
@@ -95,33 +97,70 @@
         </div>
         <DirectionsSlider />
         <div class="wrapper">
+            <CorpTeach />
             <StudentsWorks />
             <NewEra v-motion-pop-visible-once />
             <MediaData />
+            <AnswersQuestion />
             <OneSystem />
             <ContantUs v-motion-slide-visible-bottom />
-
+            <EffectResult />
         </div>
+
     </div>
 </template>
 
 <script lang="ts" setup>
 import { AdvantagesCards } from '@/features/advantages';
+import { AnswersQuestion } from '@/features/answers';
 import { ContantUs } from '@/features/contactUs';
+import { CorpTeach } from '@/features/corpTeach';
 import { DirectionsSlider } from '@/features/directions';
+import { EffectResult } from '@/features/effectResult';
 import { HelpYou } from '@/features/help';
 import { MediaData } from '@/features/media';
 import { NewEra } from '@/features/newEra';
 import { OneSystem } from '@/features/oneSystem';
 import { StudentsWorks } from '@/features/students';
 import { Button } from '@/shared/ui/button';
-import { useMotion } from '@vueuse/motion';
+
 </script>
 
 <style lang="scss" scoped>
-@media screen and (max-width:1155px) {
+@media screen and (max-width:867px) {
+    .title {
+        font-size: 60px !important;
+    }
+
+    .welcome__sub {
+        display: none !important;
+    }
+
+    .welcome__text {
+        font-size: 12px !important;
+    }
+
+    .welcome__title--sub {
+        display: block !important;
+    }
+
+    .welcome__decoration-rt {
+        display: none;
+    }
+}
+
+@media screen and (max-width:711px) {
     .title {
         font-size: 40px !important;
+    }
+
+}
+
+@media screen and (max-width:1155px) {
+    .title {}
+
+    .welcome__group {
+        margin-top: 60px !important;
     }
 
     .block {
@@ -135,6 +174,7 @@ import { useMotion } from '@vueuse/motion';
     }
 
 
+
     .welcome {
         margin-bottom: 20px !important;
 
@@ -142,11 +182,15 @@ import { useMotion } from '@vueuse/motion';
 
         &__info {
             width: 100% !important;
+            border-radius: 20px !important;
+
         }
 
         &__right {
             display: none !important;
         }
+
+
 
         &__bottom {
             display: none;
@@ -180,6 +224,11 @@ import { useMotion } from '@vueuse/motion';
     padding: 0 16px;
     box-sizing: border-box;
 
+}
+
+.welcome__title--sub {
+    display: none;
+    text-align: end;
 }
 
 .welcome__group {
