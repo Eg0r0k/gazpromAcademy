@@ -1,6 +1,6 @@
 <template>
     <div class="allSystem">
-        <img src="/img/allGroup.png" alt="Все в одной системе, создано для достижения новых высот">
+        <img src="/img/allGroup.svg" alt="Все в одной системе, создано для достижения новых высот">
         <div class="allSystem__for">
             <p class="allSystem__p">Руководителям</p>
             <p class="allSystem__p">Дизайнерам</p>

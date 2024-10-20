@@ -3,8 +3,9 @@
         <Carousel>
             <Slide v-for="(slide, index) in imgs" :key="index">
                 <div class="carousel__item" :style="{ backgroundImage: `url(${slide})` }">
-                    <p class="carousel__text">Смотрим на большие данные, так мы улучшаем курсы, чтобы вы достигли своей
-                        цели - сменили
+                    <p class="carousel__text">Смотрим на большие данные, так мы <br> улучшаем курсы, чтобы вы достигли
+                        своей
+                        цели — сменили
                         профессию или должность </p>
                     <h2 class="carousel__title">Эффективное <br>
                         обучение и результат</h2>
@@ -90,7 +91,7 @@ const imgs = ref([Png1, Png2, Png3, Png4])
 
 .carousel__title {
     position: absolute;
-    bottom: 80px;
+    bottom: 40px;
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 70px;

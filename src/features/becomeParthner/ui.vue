@@ -12,13 +12,13 @@
             </div>
         </div>
         <div>
-            <img src="/img/partner.png" alt="">
+            <img src="/img/partner.svg" alt="partner" height="400">
         </div>
 
     </div>
     <div class="becomeParthner__bottom">
         <ul class="becomeParthner__fact">
-            <li class="becomeParthner__item">✦ Эксперты Газпром.Академии</li>
+            <li class="becomeParthner__item">✦ Эксперты Академии</li>
             <li class="becomeParthner__item">✦ Найм стажёров </li>
             <li class="becomeParthner__item">✦ Олимпиады и хакатоны</li>
         </ul>
@@ -37,6 +37,7 @@ import { Button } from '@/shared/ui/button';
         flex-direction: column-reverse;
 
         &__title {
+            font-size: 40px !important;
             margin-top: 40px;
         }
 
@@ -48,6 +49,10 @@ import { Button } from '@/shared/ui/button';
 
         &__bottom {
             margin-bottom: 60px !important;
+        }
+
+        &__group {
+            flex-direction: column !important;
         }
     }
 }

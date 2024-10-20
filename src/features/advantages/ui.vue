@@ -8,19 +8,20 @@
             <p>Исследуем приоритетные области для привлечения молодежи</p>
         </div>
         <div class="stat-item" v-motion-roll-visible-once-bottom>
-            <div class="stat-frame gradient">
+            <div class="stat-frame ">
                 >1.5K
             </div>
             <h2>Сильные
                 наставники</h2>
-            <p>Специалисты с сильным бэкграундом и многолетним опытом</p>
+            <p>Профессионалы с многолетним стажем</p>
         </div>
         <div class="stat-item" v-motion-roll-visible-once-bottom>
             <div class="stat-frame">
                 100%
             </div>
             <h2>Стажировка
-                в ИТ-компании</h2>
+                <br> в ИТ-компании
+            </h2>
             <p>Лучшим студентам предлагаем вакансии партнеров</p>
         </div>
     </div>
@@ -91,9 +92,7 @@
 
     }
 
-    .gradient {
-        background: linear-gradient(161deg, #cdecff 33.5%, #0079c2 100%) !important;
-    }
+
 
     .stat-item {
 

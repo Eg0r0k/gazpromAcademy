@@ -29,8 +29,8 @@ const router = createRouter({
       component: ParthsPage
     },
     {
-      path: '/dsdad',
-      name: 'asdasds',
+      path: '/programms',
+      name: 'programms',
       component: ExpertsPage
     }
   ]

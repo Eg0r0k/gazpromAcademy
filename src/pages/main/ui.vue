@@ -86,7 +86,9 @@
                                 d="M71.2472 176.183C141.053 179.551 248.357 174.647 310.659 133.918C328.842 122.031 352.667 103.242 344.511 71.104C334.896 33.2173 291.758 17.2421 266.217 11.0306C217.882 -0.724062 138.432 -3.3395 91.4486 11.3159C70.7064 17.7859 49.9521 26.3139 31.1158 39.3308C20.5147 46.6567 -0.856117 63.7909 2.22533 84.1761C4.5242 99.3843 21.9866 112.664 31.1515 118.92C55.655 135.645 84.3232 143.873 111.005 150.525C168.421 164.838 256.441 177.623 314.44 181.196"
                                 stroke="#0079C2" stroke-width="2" stroke-linecap="round" />
                         </svg>
-                        <p class="title-bottom">Проведем тебя в мир IT-профессий, научим тому, что сами используем в
+                        <p class="title-bottom">Проведем тебя в мир IT-профессий, научим тому, что сами используем <br>
+                            в
+
                             работе
                         </p>
                     </div>
@@ -96,15 +98,19 @@
             <HelpYou />
         </div>
         <DirectionsSlider />
+
         <div class="wrapper">
-            <CorpTeach />
+
+
             <StudentsWorks />
-            <NewEra v-motion-pop-visible-once />
-            <MediaData />
-            <AnswersQuestion />
+            <NewEra />
+
+
             <OneSystem />
-            <ContantUs v-motion-slide-visible-bottom />
+            <CorpTeach />
             <EffectResult />
+            <ContantUs v-motion-slide-visible-bottom />
+            <AnswersQuestion />
         </div>
 
     </div>

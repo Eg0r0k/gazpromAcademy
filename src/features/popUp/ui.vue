@@ -197,11 +197,12 @@ onUnmounted(() => {
 
 .cat {
     margin: 20px auto 20px auto;
-border-radius:24px;
+    border-radius: 24px;
+
     &__controls {
         display: flex;
         justify-content: end;
-        
+
     }
 }
 
@@ -248,6 +249,16 @@ h2 {
     border: none;
     font-size: 24px;
     cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    .content__header {
+        margin-bottom: 20px !important;
+    }
 }
 
 .controls {

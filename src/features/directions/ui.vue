@@ -10,8 +10,6 @@
             </div>
         </div>
 
-
-
         <Carousel v-motion-slide-visible-left :items-to-show="itemsToShow" ref="carouselRef">
             <Slide v-for="(slide, index) in filteredSlides" :key="index">
                 <div :class="['carousel__item', 'slide-' + slide.background]">
@@ -30,22 +28,18 @@
 </template>
 
 <script setup lang="ts">
-
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted, onBeforeUnmount } from 'vue';
 import { Carousel, Slide } from 'vue3-carousel';
-
 import 'vue3-carousel/dist/carousel.css';
 
 const activeCategory = ref(0);
 
-
 const categories = ref([
-    { name: 'Популярное', slides: [1, 2, 3, 4, 5, 6] },
-    { name: 'IT', slides: [4, 5, 1, 3] },
-    { name: 'Современные технологии', slides: [1, 4, 5, 6] },
-    { name: 'Бесплатно', slides: [2, 5, 3, 4] }
+    { name: 'Популярное', slides: [1, 2, 3, 4, 5] },
+    { name: 'IT', slides: [4, 5, 1, 2, 6] },
+    { name: 'Современные технологии', slides: [1, 4, 5, 6, 2] },
+    { name: 'Бесплатно', slides: [2, 5, 3, 4, 1] }
 ]);
-
 
 const slides = ref([
     { id: 1, background: 'slide1' },
@@ -58,8 +52,20 @@ const slides = ref([
     { id: 8, background: 'slide3' }
 ]);
 
-
 const carouselRef = ref<any>(null);
+
+
+const itemsToShow = ref(4);
+
+const updateItemsToShow = () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth <= 531) {
+        itemsToShow.value = 1;
+    } else {
+        const totalSlides = filteredSlides.value.length;
+        itemsToShow.value = totalSlides < 4.5 ? totalSlides : 4.5;
+    }
+};
 
 
 const filteredSlides = computed(() => {
@@ -68,15 +74,19 @@ const filteredSlides = computed(() => {
 });
 
 
-const itemsToShow = computed(() => {
-    const totalSlides = filteredSlides.value.length;
-    return totalSlides < 4.5 ? totalSlides : 4.5;
+onMounted(() => {
+    updateItemsToShow();
+    window.addEventListener('resize', updateItemsToShow);
+});
+
+
+onBeforeUnmount(() => {
+    window.removeEventListener('resize', updateItemsToShow);
 });
 
 
 const setActiveCategory = (index: number) => {
     activeCategory.value = index;
-
     if (carouselRef.value) {
         carouselRef.value.slideTo(0);
     }
@@ -93,6 +103,13 @@ const setActiveCategory = (index: number) => {
 
         }
 
+        &__title {
+            font-size: 40px !important;
+        }
+
+        &__controls {
+            padding: 5px 14px !important;
+        }
     }
 }
 

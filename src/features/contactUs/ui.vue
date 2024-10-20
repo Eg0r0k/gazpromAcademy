@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Электронная почта <span class="required">*</span></label>
+                    <label for="email">Почта <span class="required">*</span></label>
                     <input placeholder="ivanov.aa@mail.ru" type="email" id="email" v-model="form.email" required />
                 </div>
 

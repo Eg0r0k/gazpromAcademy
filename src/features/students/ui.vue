@@ -1,5 +1,5 @@
 <template>
-    <h2 class="title" v-motion-fade-visible-once> Наши студенты <span>работают</span> в топовых компниях</h2>
+    <h2 class="title" v-motion-fade-visible-once> Наши студенты <span>работают</span> в топовых компаниях</h2>
     <div class="grid-container">
         <div v-for="(svg, index) in svgs" :key="index" class="grid-item">
             <component :is="svg" />

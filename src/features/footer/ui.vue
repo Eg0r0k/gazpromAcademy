@@ -80,6 +80,10 @@
     opacity: 0.3;
 }
 
+.text {
+    opacity: 0.5;
+}
+
 .link {
     width: 48px;
     height: 48px;
@@ -135,6 +139,16 @@ h3 {
     }
 }
 
+@media screen and (max-width:509px) {
+    .footer {
+        &__title {
+            font-size: 22px !important;
+        }
+
+
+    }
+}
+
 .footer {
     &__line {
         &--top {
@@ -156,6 +170,7 @@ h3 {
         font-size: 70px;
         line-height: 110%;
         color: #161f3e;
+        margin-bottom: -20px;
     }
 
     &__nav {
@@ -169,6 +184,7 @@ h3 {
         position: absolute;
         right: 0;
         top: 0;
+
     }
 
     &__links {
